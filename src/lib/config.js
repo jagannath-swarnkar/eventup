@@ -6,7 +6,7 @@ export const DRAWER_TOASTER_TIME = 3000;
 
 export const FACEBOOK_ID = "";
 export const APP_NAME = "Eventup";
-export const WEB_URL = 'https://eventup.ml'
+export const WEB_URL = 'https://eventup.jagan.pro'
 
 export const collection_icon_white = "/images/icons/collection-icon_white.svg";
 export const share_icon_white = "/images/icons/share-icon_white.svg";
@@ -25,8 +25,8 @@ export const OPTIONS = {
     interfaceConfigOverwrite: {
         APP_NAME: "Eventup",
         PROVIDER_NAME: "Eventup",
-        BRAND_WATERMARK_LINK: "https://eventup.ml/icon.png",
-        JITSI_WATERMARK_LINK: 'https://eventup.ml/icon.png',
+        BRAND_WATERMARK_LINK: "https://eventup.jagan.pro/icon.png",
+        JITSI_WATERMARK_LINK: 'https://eventup.jagan.pro/icon.png',
         SHOW_PROMOTIONAL_CLOSE_PAGE: false,
         SHOW_JITSI_WATERMARK: false,
         SHOW_DEEP_LINKING_IMAGE: false,
@@ -38,9 +38,9 @@ export const OPTIONS = {
         DISPLAY_WELCOME_PAGE_CONTENT: false,
         DEFAULT_BACKGROUND: '#474747',
         DEFAULT_LOCAL_DISPLAY_NAME: 'me',
-        DEFAULT_LOGO_URL: 'https://eventup.ml/icon.png',
+        DEFAULT_LOGO_URL: 'https://eventup.jagan.pro/icon.png',
         DEFAULT_REMOTE_DISPLAY_NAME: 'Fellow Eventup',
-        DEFAULT_WELCOME_PAGE_LOGO_URL: 'https://eventup.ml/icon.png',
+        DEFAULT_WELCOME_PAGE_LOGO_URL: 'https://eventup.jagan.pro/icon.png',
         TOOLBAR_BUTTONS: [
         'microphone', 'camera', 'closedcaptions', 'desktop', 'fullscreen',
         'fodeviceselection', 'hangup', 'profile', 'info', 'chat', 'recording',

@@ -31,7 +31,7 @@ const StartConference = () => {
             // setInterval(() => {
             //     console.log('element---> ', document.getElementsByClassName('watermark'))
             // }, 2000);
-            // el.style?.backgroundImage = "url(https://eventup.ml/favicon.png)"
+            // el.style?.backgroundImage = "url(https://eventup.jagan.pro/favicon.png)"
         })
         api.on('videoConferenceLeft',async(e)=>{
             startLoader()
