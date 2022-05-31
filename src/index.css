@@ -1,0 +1,151 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  height: 100vh;
+  width: 100vw;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+#meeting{
+  height: 100vh;
+  width: 100vw;
+}
+
+
+input{
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+button{
+  outline: none !important;
+}
+
+button.btn {
+  background-color: #1877f2 ;
+  border-color: #1877f2 ;
+  box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 25%);
+  color: #fff;
+}
+.app-link{
+  text-decoration: none !important;
+}
+
+.loader {
+  position: fixed;
+  z-index: 999999;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #00000085;
+  overflow: hidden;
+  height: 100%;
+}
+
+.mu-dialog-content{
+  width: 100%;
+  padding: 0 !important;
+}
+
+.MuiDialog-container > div{
+    width: 100% !important;
+}
+
+.modal-dialog {
+  margin: 0;
+  padding: 0;
+}
+.modal-content {
+  border: none;
+  border-radius: 0px;
+  padding: 0;
+  margin: 0;
+}
+
+.btmModal .modal-dialog {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+.modal.left .modal-dialog,
+.modal.right .modal-dialog,
+.modal.bottom .modal-dialog {
+    position: fixed;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: translate3d(0%, 0, 0);
+        -ms-transform: translate3d(0%, 0, 0);
+         -o-transform: translate3d(0%, 0, 0);
+            transform: translate3d(0%, 0, 0);
+            margin: 0 !important;
+}
+
+.modal.left .modal-content,
+.modal.right .modal-content,
+.modal.bottom .modal-content {
+    height: 100%;
+    overflow-y: auto;
+    border: none !important;
+    border-radius: 0px !important;
+}
+
+/*Left*/
+.modal.left.fade .modal-dialog{
+    left: -100%;
+    -webkit-transition: opacity 0.3s linear, left 0.3s ease-out;
+       -moz-transition: opacity 0.3s linear, left 0.3s ease-out;
+         -o-transition: opacity 0.3s linear, left 0.3s ease-out;
+            transition: opacity 0.3s linear, left 0.3s ease-out;
+}
+
+.modal.left.fade.show .modal-dialog{
+    left: 0;
+}
+/*Left*/  
+
+/*Right*/
+.modal.right.fade .modal-dialog {
+    right: -100%;
+    -webkit-transition: opacity 0.3s linear, right 0.3s ease-out;
+       -moz-transition: opacity 0.3s linear, right 0.3s ease-out;
+         -o-transition: opacity 0.3s linear, right 0.3s ease-out;
+            transition: opacity 0.3s linear, right 0.3s ease-out;
+}
+
+.modal.right.fade.show .modal-dialog {
+    right: 0;
+}
+/*Right*/
+
+/*bottom*/
+.modal.bottom.fade .modal-dialog {
+    bottom: -100%;
+    height: auto !important;
+    -webkit-transition: opacity 0.3s linear, bottom 0.3s ease-out;
+       -moz-transition: opacity 0.3s linear, bottom 0.3s ease-out;
+         -o-transition: opacity 0.3s linear, bottom 0.3s ease-out;
+            transition: opacity 0.3s linear, bottom 0.3s ease-out;
+}
+
+.modal.bottom.fade.show .modal-dialog {
+    bottom: 0%;
+    transition: 0.3s ease-out;
+}
+/*bottom*/
+.modal-dialog-scrollable .modal-content {
+  overflow-y: auto !important;
+}

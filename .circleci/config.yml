@@ -1,0 +1,48 @@
+# Javascript Node CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-javascript/ for more details
+#
+version: 2.1
+jobs:
+  # Job-2
+  deployProd:
+    docker:
+      - image: circleci/node:10.19.0
+        environment: NODE_OPTIONS=--max_old_space_size=4096
+    working_directory: ~/repo
+    steps:
+      - checkout
+      # install sshpass
+      - run:
+          name: Update Npm To Latest
+          command: 'sudo npm install -g npm@latest'
+      - restore_cache: # special step to restore the dependency cache
+          name: Restore Npm cache
+          key: dependency-cache-{{ checksum "package-lock.json" }}
+      - run:
+          name: Install npm
+          command: npm install
+      - save_cache:
+          key: dependency-cache-{{ checksum "package-lock.json" }}
+          paths:
+            - ./node_modules
+      - run:
+          name: Run build
+          command: |
+            sudo npm run build
+      # changing perssion
+      - run: sudo apt-get install sshpass
+      - run: chmod +x ./.circleci/deployProd.sh
+      - add_ssh_keys:
+          fingerprints:
+            - "2c:3a:95:63:aa:c6:6b:96:86:a9:06:32:7c:12:8e:d7"
+      # deploy and start server
+      - run: ./.circleci/deployProd.sh
+workflows:
+  version: 2.1
+  build_deploy:
+    jobs:
+      - deployProd:
+          filters:
+            branches:
+              only: master
